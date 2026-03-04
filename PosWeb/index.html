@@ -4,38 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoteles Royal Palm - Página Oficial</title>
-    <link rel="stylesheet" href="style.css"></head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<!-- Logo -->
-<div class="logo">
-    <img src="imagenes/logo_pagina.webp" alt="Logo Hotel Royal Palm" loading="lazy">
-</div>
 
-
-    <!-- Navegación -->
     <header class="navbar">
-        <div class="logo">Hotel <span class="thin"> ROYALES PALM</span></div>
+        <div class="logo">
+            <img src="imagenes/logo_pagina.webp" alt="Logo Hotel Royal Palm" style="height: 40px; margin-right: 10px;">
+            Hotel <span class="thin"> ROYAL PALM</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Hoteles</a></li>
+                <li><a href="index.html">Hoteles</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
                 <li><a href="#">Servicios</a></li>
-                <li><a href="#" class="btn-reservar">Reservar</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-        <li><a href="/contacto">Contacto</a></li>            </ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#" class="btn-reservar">Reservar</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section con Buscador -->
     <section class="hero">
         <div class="hero-content">
             <h1>Dónde dormir mejor en España</h1> 
-            <br>
-            <h1>Hoteles</h1> 
             <p>Porque descansar bien empieza por elegir dónde dormir.</p>
         </div>
         
-        <!-- Barra de búsqueda básica -->
         <div class="booking-bar">
             <div class="input-group">
                 <label>Destino</label>
@@ -53,10 +48,10 @@
         </div>
     </section>
 
-    <!-- Sección de Hoteles Destacados -->
     <main class="container">
         <h2 class="section-title">Nuestros Hoteles Destacados</h2>
         <div class="grid-hoteles">
+            
             <article class="card">
                 <img src="imagenes/imagen_hotelMadridCentral.webp" alt="Hotel Madrid" loading="lazy">
                 <div class="card-info">
@@ -64,21 +59,13 @@
                     <p>En el corazón de la capital con la mejor accesibilidad.</p>
                     <a href="#" class="link">Ver hotel</a>
                 </div>
-                <section class="services container">
-    <h2 class="section-title">Experiencia Royal Palm</h2>
-    <div class="services-grid">
-        <div class="service-item">
-            <span>🌐</span>
-            <h4>Wi-Fi Alta Velocidad</h4>
-            <p>Conexión gratuita en todas las áreas.</p>
-        </div>
-        
             </article>
 
             <article class="card">
-                <img src="imagenes/hotelBarcelona.webp" alt="Hotel Royal Palm Barcelona cerca de la playa" loading="lazy">
+                <img src="imagenes/hotelBarcelona.webp" alt="Hotel Royal Palm Barcelona" loading="lazy">
                 <div class="card-info">
-                    <h3>Royal Palm Barcelona</h3>                    <p>El mejor hotel en barcelona. Diseño moderno a pocos metros de la playa.</p>
+                    <h3>Royal Palm Barcelona</h3>
+                    <p>Diseño moderno a pocos metros de la playa de la Barceloneta.</p>
                     <a href="hotel-barcelona.html" class="link">Ver hotel</a>
                 </div>
             </article>
@@ -89,36 +76,50 @@
                     <h3>Royal Palm Valencia</h3>
                     <p>Disfruta de la ciudad de las artes y las ciencias.</p>
                     <a href="#" class="link">Ver hotel</a>
-                </div>            </article>
+                </div>
+            </article>
+            
         </div>
-   <div class="service-item">
-            <span>🏊</span>
-            <h4>Piscina & Spa</h4>
-            <p>Relájate en nuestras instalaciones de lujo.</p>
-        </div>
-        <div class="service-item">
-            <span>🍽️</span>
-            <h4>Restaurante Gourmet</h4>
-            <p>Gastronomía local e internacional.</p>
-        </div>
-        <div class="service-item">
-            <span>🏋️</span>
-            <h4>Gimnasio 24/7</h4>
-            <p>No pierdas tu rutina durante tu estancia.</p>
-        </div>
-    </div>
-</section>
-                
-                </main>
+    </main>
 
-    <!-- Footer -->
+    <section class="services container">
+        <h2 class="section-title">Experiencia Royal Palm</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <span>🌐</span>
+                <h4>Wi-Fi Alta Velocidad</h4>
+                <p>Conexión gratuita en todas las áreas del hotel.</p>
+            </div>
+            <div class="service-item">
+                <span>🏊</span>
+                <h4>Piscina & Spa</h4>
+                <p>Relájate en nuestras instalaciones de lujo.</p>
+            </div>
+            <div class="service-item">
+                <span>🍽️</span>
+                <h4>Restaurante Gourmet</h4>
+                <p>Gastronomía local e internacional de primer nivel.</p>
+            </div>
+            <div class="service-item">
+                <span>🏋️</span>
+                <h4>Gimnasio 24/7</h4>
+                <p>No pierdas tu rutina durante tu estancia.</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Poscicionamiento Web - Hotel Royal Palm</p>
-        <p>Accesibilidad | Privacidad | Contacto</p>
+        <div class="container">
+            <p>&copy; 2026 Posicionamiento Web - Hotel Royal Palm</p>
+            <p>
+                <a href="#" style="color:white; text-decoration:none;">Accesibilidad</a> | 
+                <a href="#" style="color:white; text-decoration:none;">Privacidad</a> | 
+                <a href="contacto.html" style="color:white; text-decoration:none;">Contacto</a>
+            </p>
+        </div>
     </footer>
 
 </body>
-
 </html>
 
 
