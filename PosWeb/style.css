@@ -10,6 +10,21 @@
     height: 40px;
     width: auto;
 }
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Para que quede por encima del contenido al hacer scroll */
+    background: rgba(255, 255, 255, 0.95); /* Un poco de transparencia */
+    backdrop-filter: blur(5px); /* Efecto cristal moderno */
+}
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -187,6 +202,7 @@ footer {
     margin-top: 40px;
 
 }
+
 
 
 
