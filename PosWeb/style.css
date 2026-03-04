@@ -10,7 +10,12 @@
     height: 40px;
     width: auto;
 }
-
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  
+}
 .logo {
     display: flex;
     align-items: center;
@@ -172,3 +177,4 @@ footer {
     margin-top: 40px;
 
 }
+
