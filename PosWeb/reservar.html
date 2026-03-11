@@ -2,31 +2,131 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Reserva - Royal Palm</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para el formulario */
+        .reserva-form {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #005495; }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .mensaje-exito {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagenes/logo_pagina.webp" alt="Logo" style="height: 40px; margin-right: 10px;">
+            Hotel <span class="thin"> ROYAL PALM</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hoteles</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="container">
-        <h2 class="section-title">Confirmar Disponibilidad</h2>
-        <form style="max-width: 500px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <div class="input-group" style="margin-bottom: 15px;">
-                <label>Tu Nombre</label>
-                <input type="text" placeholder="Ej. Juan Pérez" style="width: 100%; padding: 10px;">
+        <h2 class="section-title">Confirmar tu estancia</h2>
+        
+        <div class="reserva-form">
+            <div id="msgConfirmacion" class="mensaje-exito">
+                ¡Solicitud enviada! Consultando disponibilidad...
             </div>
-            <div class="input-group" style="margin-bottom: 15px;">
-                <label>Hotel Seleccionado</label>
-                <select style="width: 100%; padding: 10px;">
-                    <option>Royal Palm Madrid Central</option>
-                    <option>Royal Palm Barcelona</option>
-                    <option>Royal Palm Valencia</option>
-                </select>
-            </div>
-            <div class="input-group" style="margin-bottom: 15px;">
-                <label>Fecha de Entrada</label>
-                <input type="date" style="width: 100%; padding: 10px;">
-            </div>
-            <button type="submit" class="btn-reservar" style="width: 100%; border: none; cursor: pointer;">Consultar ahora</button>
-        </form>
+
+            <form id="formReserva">
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" required placeholder="Tu nombre y apellidos">
+                </div>
+
+                <div class="input-group">
+                    <label>Selecciona tu Destino</label>
+                    <select id="hotelSelect">
+                        <option value="madrid">Royal Palm Madrid Central</option>
+                        <option value="barcelona">Royal Palm Barcelona</option>
+                        <option value="valencia">Royal Palm Valencia</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha de Entrada</label>
+                    <input type="date" id="fechaEntrada" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Fecha de Salida</label>
+                    <input type="date" id="fechaSalida" required>
+                </div>
+
+                <button type="submit" class="btn-reservar" style="width: 100%; border: none; cursor: pointer; font-size: 1.1rem;">
+                    Consultar Disponibilidad
+                </button>
+            </form>
+        </div>
     </main>
+
+    <script>
+        // 1. CONFIGURAR FECHA MÍNIMA (HOY)
+        const hoy = new Date().toISOString().split('T')[0];
+        const inputEntrada = document.getElementById('fechaEntrada');
+        const inputSalida = document.getElementById('fechaSalida');
+        
+        // Bloqueamos fechas pasadas en el calendario
+        inputEntrada.min = hoy;
+        inputSalida.min = hoy;
+
+        // 2. LÓGICA AL CAMBIAR FECHA DE ENTRADA
+        inputEntrada.addEventListener('change', () => {
+            // La fecha de salida no puede ser antes que la de entrada
+            inputSalida.min = inputEntrada.value;
+        });
+
+        // 3. SIMULAR ENVÍO DEL FORMULARIO
+        document.getElementById('formReserva').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
+            
+            // Mostrar mensaje de carga/éxito
+            const mensaje = document.getElementById('msgConfirmacion');
+            mensaje.style.display = 'block';
+            
+            // Desactivar el botón para evitar clics dobles
+            const boton = this.querySelector('button');
+            boton.disabled = true;
+            boton.innerText = "Buscando...";
+
+            // Simular una respuesta del servidor tras 2 segundos
+            setTimeout(() => {
+                alert("Hemos recibido tu solicitud para el hotel en " + document.getElementById('hotelSelect').value + ". En breve te contactaremos.");
+                // Opcional: Redirigir al inicio
+                // window.location.href = "index.html";
+            }, 2000);
+        });
+    </script>
+
 </body>
 </html>
