@@ -52,7 +52,7 @@ nav ul li a {
 
 /* Hero Section con Video */
 .hero {
-    height: 65vh;
+    height: 70vh; /* Aumentado ligeramente para dar más aire */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -61,7 +61,7 @@ nav ul li a {
     align-items: center;
     color: white;
     text-align: center;
-    background: #000; /* Fondo de respaldo */
+    background: #000;
 }
 
 .hero-video {
@@ -83,7 +83,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Capa oscura para legibilidad */
+    background: rgba(0, 0, 0, 0.3); 
     z-index: 2;
 }
 
@@ -91,6 +91,7 @@ nav ul li a {
     position: relative;
     z-index: 3;
     padding: 0 20px;
+    margin-bottom: 50px; /* Desplaza el texto hacia arriba para no chocar con la barra */
 }
 
 .hero h1 { 
@@ -99,22 +100,17 @@ nav ul li a {
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-
-/* Barra de Reserva */
+/* Barra de Reserva - AQUÍ ESTÁ EL CAMBIO */
 .booking-bar {
     position: absolute;
-    bottom: -30px;
+    bottom: 40px; /* Cambiado de -30px a 40px para subirla */
     left: 50%;
     transform: translateX(-50%);
     background: white;
     padding: 20px;
     display: flex;
     gap: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     border-radius: 8px;
     color: #333;
     z-index: 4;
@@ -132,12 +128,15 @@ nav ul li a {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.3s;
 }
+
+.btn-search:hover { background: #c51e11; }
 
 /* Contenido Principal */
 .container {
     max-width: 1100px;
-    margin: 80px auto 40px;
+    margin: 60px auto 40px;
     padding: 0 20px;
 }
 
@@ -159,24 +158,13 @@ nav ul li a {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
+.card:hover { transform: translateY(-10px); }
 .card img { width: 100%; height: 220px; object-fit: cover; }
 .card-info { padding: 20px; }
-.card-info h3 { margin-bottom: 10px; }
-.card-info .link {
-    display: inline-block;
-    margin-top: 15px;
-    color: #005495;
-    text-decoration: none;
-    font-weight: bold;
-}
+.card-info .link { color: #005495; text-decoration: none; font-weight: bold; }
 
 /* Servicios */
 .services-grid {
@@ -184,25 +172,23 @@ nav ul li a {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     text-align: center;
-    margin-top: 20px;
 }
 
-.service-item span { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+.service-item span { font-size: 2.5rem; }
 
 /* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 40px 0;
     margin-top: 60px;
 }
 
-/* Responsivo */
+/* Responsivo Móvil */
 @media (max-width: 768px) {
     .navbar { flex-direction: column; gap: 15px; }
-    nav ul li { margin: 0 10px; }
-    .hero h1 { font-size: 2.2rem; }
+    .hero h1 { font-size: 2rem; }
     .booking-bar {
         position: relative;
         bottom: 0;
@@ -212,9 +198,7 @@ footer {
         width: 90%;
         margin: 20px auto;
     }
-    .hero { height: auto; padding: 100px 0; }
-    .hero-video { height: 100%; }
+    .hero { height: auto; padding: 60px 0; }
 }
-
 
 
