@@ -1,151 +1,162 @@
- <header class="navbar">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Hotel Royal Palm</title>
+    
+    <link rel="icon" href="imagenes/logo_pagina.jpg" type="image/jpeg">
+    
+    <link rel="stylesheet" href="style.css">
 
-        <div class="logo">Hotel <span class="thin"> ROYAL PALM</span></div>
+    <style>
+        /* Ajustes específicos para que esta página se vea perfecta */
+        .main-content {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
 
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .feature-card:hover { transform: translateY(-5px); }
+
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+        .stats-container {
+            background: #005495;
+            color: white;
+            padding: 50px 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h3 { font-size: 2.5rem; margin-bottom: 5px; }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-card { text-align: center; }
+        .team-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #005495;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagenes/logo_pagina.webp" alt="Logo Hotel Royal Palm" style="height: 40px; margin-right: 10px;">
+            Hotel <span class="thin"> ROYAL PALM</span>
+        </div>
         <nav>
-
             <ul>
-
-                <li><a href="index.html">Inicio</a></li>
-
-                <li><a href="#">Hoteles</a></li>
-
-                <li><a href="#">Ofertas</a></li>
-
+                <li><a href="index.html">Hoteles</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-
+                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="#" class="btn-reservar">Reservar</a></li>
-
             </ul>
-
         </nav>
-
     </header>
 
-
-
-    <section class="hero">
-
+    <section class="hero" style="background-image: url('imagenes/hotelMadrid.png'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-
             <h1>Nuestra Historia</h1>
-
             <p>Líderes en accesibilidad, sostenibilidad e innovación en toda España.</p>
-
         </div>
-
     </section>
 
-
-
     <main class="main-content">
-
         <section>
-
             <h2 class="section-title">Propósito y Valores</h2>
-
             <div class="features-grid">
-
                 <div class="feature-card">
-
                     <div class="feature-icon">🎯</div>
-
                     <h3>Misión</h3>
-
-                    <p>Experiencias hoteleras excepcionales y accesibles para todos.</p>
-
+                    <p>Ofrecer experiencias hoteleras excepcionales y 100% accesibles para todos nuestros huéspedes.</p>
                 </div>
-
                 <div class="feature-card">
-
                     <div class="feature-icon">👁️</div>
-
                     <h3>Visión</h3>
-
-                    <p>Ser el referente europeo en turismo responsable e inclusivo.</p>
-
+                    <p>Ser el referente europeo en turismo responsable, inclusivo y de alta calidad.</p>
                 </div>
-
                 <div class="feature-card">
-
                     <div class="feature-icon">❤️</div>
-
                     <h3>Compromiso</h3>
-
-                    <p>Excelencia, innovación constante y sostenibilidad ambiental.</p>
-
+                    <p>Excelencia en el servicio, innovación constante y respeto por el medio ambiente.</p>
                 </div>
-
             </div>
-
         </section>
-
-
 
         <section class="stats-container">
-
             <div class="stats-grid">
-
                 <div class="stat-item"><h3>10+</h3><p>Hoteles</p></div>
-
                 <div class="stat-item"><h3>98%</h3><p>Satisfacción</p></div>
-
                 <div class="stat-item"><h3>100%</h3><p>Accesibles</p></div>
-
                 <div class="stat-item"><h3>15</h3><p>Premios</p></div>
-
             </div>
-
         </section>
-
-
 
         <section>
-
             <h2 class="section-title">Nuestro Equipo</h2>
-
             <div class="team-grid">
-
                 <div class="team-card">
-
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="CEO">
-
                     <h3>Daniel Nazarith</h3>
-
-                    <p>CEO & Fundadora</p>
-
+                    <p>CEO & Fundador</p>
                 </div>
-
                 <div class="team-card">
-
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Directora">
-
                     <h3>Wendy Martínez</h3>
-
                     <p>Directora de Sostenibilidad</p>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
 
-
-
     <footer>
-
-        <p>&copy; 2026 Poscicionamiento Web - Hotel Royal Palm</p>
-
-        <p>Accesibilidad | Privacidad | Contacto</p>
-
+        <div class="container">
+            <p>&copy; 2026 Posicionamiento Web - Hotel Royal Palm</p>
+            <p>
+                <a href="#" style="color:white; text-decoration:none;">Accesibilidad</a> | 
+                <a href="#" style="color:white; text-decoration:none;">Privacidad</a> | 
+                <a href="contacto.html" style="color:white; text-decoration:none;">Contacto</a>
+            </p>
+        </div>
     </footer>
 
-
-
 </body>
-
-
-
 </html>
