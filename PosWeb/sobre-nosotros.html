@@ -3,17 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Hoteles Royal Palm - Página Oficial</title>
-
-    <meta name="description" content="Hoteles Royal Palm en España. Descubre nuestros hoteles en Madrid, Barcelona y Valencia con spa, piscina, restaurante y servicios de lujo. Reserva tu estancia al mejor precio.">
-    <meta name="keywords" content="hoteles en España, hotel Royal Palm, hotel en Madrid, hotel en Barcelona, hotel en Valencia, hoteles de lujo, reservar hotel, hotel con spa, hotel con piscina, alojamiento en España">
-
+    <title>Sobre Nosotros - Hotel Royal Palm</title>
+    
     <link rel="icon" href="imagenes/logo_pagina.jpg" type="image/jpeg">
     
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <style>
+        /* Ajustes específicos para que esta página se vea perfecta */
+        .main-content {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .feature-card:hover { transform: translateY(-5px); }
+
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+        .stats-container {
+            background: #005495;
+            color: white;
+            padding: 50px 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h3 { font-size: 2.5rem; margin-bottom: 5px; }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-card { text-align: center; }
+        .team-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #005495;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
 <body>
 
     <header class="navbar">
@@ -33,149 +91,61 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="imagenes/videoMain-web.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-        </video>
-        
+    <section class="hero" style="background-image: url('imagenes/hotelMadrid.png'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
-
         <div class="hero-content">
-            <h1>Dónde dormir mejor en España</h1> 
-            <p>Porque descansar bien empieza por elegir dónde dormir.</p>
-        </div>
-        
-        <div class="booking-bar">
-            <div class="input-group">
-                <label>Destino</label>
-                <input type="text" placeholder="¿A dónde vas?">
-            </div>
-            <div class="input-group">
-                <label>Entrada</label>
-                <input type="date">
-            </div>
-            <div class="input-group">
-                <label>Salida</label>
-                <input type="date">
-            </div>
-            <button class="btn-search">BUSCAR</button>
+            <h1>Nuestra Historia</h1>
+            <p>Líderes en accesibilidad, sostenibilidad e innovación en toda España.</p>
         </div>
     </section>
 
-    <main class="container">
-        <h2 class="section-title">Nuestros Hoteles Destacados</h2>
-
-        <div class="grid-hoteles">
-            <article class="card">
-                <a href="hotel-madrid.html">
-                    <img src="imagenes/imagen_hotelMadridCentral.webp" alt="Hotel Royal Palm Madrid Central" loading="lazy">
-                </a>
-                <div class="card-info">
-                    <h3>Royal Palm Madrid Central</h3>
-                    <p>En el corazón de la capital con la mejor accesibilidad.</p>
-                    <a href="hotel-madrid.html" class="link">Ver hotel</a>
+    <main class="main-content">
+        <section>
+            <h2 class="section-title">Propósito y Valores</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Misión</h3>
+                    <p>Ofrecer experiencias hoteleras excepcionales y 100% accesibles para todos nuestros huéspedes.</p>
                 </div>
-            </article>
-
-            <article class="card">
-                <a href="hotel-barcelona.html">
-                    <img src="imagenes/hotelBarcelona.webp" alt="Hotel Royal Palm Barcelona" loading="lazy">
-                </a>
-                <div class="card-info">
-                    <h3>Royal Palm Barcelona</h3>
-                    <p>Diseño moderno a pocos metros de la playa de la Barceloneta.</p>
-                    <a href="hotel-barcelona.html" class="link">Ver hotel</a>
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Visión</h3>
+                    <p>Ser el referente europeo en turismo responsable, inclusivo y de alta calidad.</p>
                 </div>
-            </article>
-
-            <article class="card">
-                <a href="hotel-valencia.html">
-                    <img src="imagenes/hotelValencia.webp" alt="Hotel Royal Palm Valencia" loading="lazy">
-                </a>
-                <div class="card-info">
-                    <h3>Royal Palm Valencia</h3>
-                    <p>Disfruta de la ciudad de las artes y las ciencias.</p>
-                    <a href="hotel-valencia.html" class="link">Ver hotel</a>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Compromiso</h3>
+                    <p>Excelencia en el servicio, innovación constante y respeto por el medio ambiente.</p>
                 </div>
-            </article>
-        </div>
+            </div>
+        </section>
+
+        <section class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item"><h3>10+</h3><p>Hoteles</p></div>
+                <div class="stat-item"><h3>98%</h3><p>Satisfacción</p></div>
+                <div class="stat-item"><h3>100%</h3><p>Accesibles</p></div>
+                <div class="stat-item"><h3>15</h3><p>Premios</p></div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="CEO">
+                    <h3>Daniel Nazarith</h3>
+                    <p>CEO & Fundador</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Directora">
+                    <h3>Wendy Martínez</h3>
+                    <p>Directora de Sostenibilidad</p>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <section class="container promo-mosaic">
-        <h2 class="section-title">Vive la experiencia Royal Palm</h2>
-        <div class="mosaic-grid">
-            <div class="mosaic-item large">
-                <img src="imagenes/imagen_hotelMadridCentral.webp" alt="Nuestras Ofertas">
-                <div class="mosaic-overlay">
-                    <div class="mosaic-text">
-                        <h3>Ofertas Especiales</h3>
-                        <p>Encuentra el mejor precio para tus próximas vacaciones.</p>
-                        <a href="ofertas.html" class="btn-mosaic">VER MÁS</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mosaic-column">
-                <div class="mosaic-item small">
-                    <img src="imagenes/hotelBarcelona.webp" alt="Servicios">
-                    <div class="mosaic-overlay">
-                        <div class="mosaic-text">
-                            <h3>Servicios</h3>
-                            <a href="servicios.html" class="btn-mosaic">DESCUBRIR</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mosaic-item small">
-                    <img src="imagenes/hotelValencia.webp" alt="Sobre Nosotros">
-                    <div class="mosaic-overlay">
-                        <div class="mosaic-text">
-                            <h3>Sobre Nosotros</h3>
-                            <a href="sobre-nosotros.html" class="btn-mosaic">CONÓCENOS</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services container">
-        <h2 class="section-title">Servicios Destacados</h2>
-        <div class="services-grid">
-            <div class="service-item"><span>🌐</span><h4>Wi-Fi Alta Velocidad</h4></div>
-            <div class="service-item"><span>🏊</span><h4>Piscina & Spa</h4></div>
-            <div class="service-item"><span>🍽️</span><h4>Restaurante Gourmet</h4></div>
-            <div class="service-item"><span>🏋️</span><h4>Gimnasio 24/7</h4></div>
-        </div>
-    </section>
-
-    <section class="testimonials container">
-        <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"La accesibilidad en el hotel de Madrid es impecable. El personal hizo que mi estancia fuera perfecta."</p>
-                <h4>— Carlos Rodríguez</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"El diseño moderno y la cercanía a la playa en Barcelona son increíbles. Volveré sin duda."</p>
-                <h4>— Elena García</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"Excelente buffet y una piscina espectacular en Valencia."</p>
-                <h4>— Mark Thompson</h4>
-            </div>
-        </div>
-    </section>
-
-    <section class="newsletter-banner">
-        <div class="container" style="margin: 0 auto;">
-            <h2>Únete al Club Royal Palm</h2>
-            <p>Suscríbete para recibir ofertas exclusivas directamente en tu email.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn-search">SUSCRIBIRME</button>
-            </form>
-        </div>
-    </section>
 
     <footer>
         <div class="container">
